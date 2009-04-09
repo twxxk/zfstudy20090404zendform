@@ -1,0 +1,3 @@
+# Do not allow browser access
+Order deny,allow
+Deny from all
