@@ -1,0 +1,12 @@
+<?php
+/* @var $this Zend_View_Helper_Url */
+/* @var $this Zend_View */
+?>
+<h1>フォームだよ</h1>
+<hr />
+<form method="post" action="<?= $this->url(array('action' => 'confirm')) ?>">
+	<?= $this->form->test ?>
+	<?= $this->form->test2 ?>
+	<input type="submit" />
+</form>
+<hr />

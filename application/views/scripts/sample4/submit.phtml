@@ -1,0 +1,7 @@
+<h1>フォームだった</h1>
+フォーム結果
+<hr />
+<?php foreach ($this->form->getValues() as $key => $value) : ?>
+	<?= $this->escape($key) ?> : <?= $this->escape($value) ?><br />
+<?php endforeach; ?>
+<hr />

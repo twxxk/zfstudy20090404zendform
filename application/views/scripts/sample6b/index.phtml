@@ -1,0 +1,27 @@
+<?php
+/* @var $this Zend_View_Helper_Url */
+/* @var $this Zend_View */
+/* @var $form Zend_Form */
+$form = $this->form;
+?>
+<h1>フォームだよ</h1>
+<hr />
+<form method="post" action="<?= $this->url(array('action' => 'confirm')) ?>">
+
+	テスト!→<input name="test" value="<?= $this->escape($form->getValue('test')) ?>" />←<br />
+	<?php if ($form->test->hasErrors()) : ?>
+		テストはへんだよ
+	<?php endif; ?>
+
+	<hr />
+	
+	テスト2!→<input name="test2" value="<?= $this->escape($form->getValue('test2')) ?>" />←<br />
+	<?php if ($form->test2->hasErrors()) : ?>
+		てすと2はへんだよ
+	<?php endif; ?>
+
+	<hr />	
+
+	<input type="submit" />
+</form>
+<hr />

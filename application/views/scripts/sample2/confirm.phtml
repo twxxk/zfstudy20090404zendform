@@ -1,0 +1,9 @@
+<h1>確認してね</h1>
+<hr />
+<?php foreach ($this->form->getValues() as $key => $value) : ?>
+	<?= $this->escape($key) ?> : <?= $this->escape($value) ?><br />
+<?php endforeach; ?>
+<form action="<?= $this->url(array('action' => 'submit')) ?>">
+	<input type="submit" value="本当にさぶみっと" />
+</form>
+<hr />

@@ -1,0 +1,13 @@
+<?php
+/* @var $this Zend_View */
+/* @var $this Zend_View_Helper_Url */
+?>
+
+hello, <?= $this->escape($this->magic) ?>
+
+<hr />
+
+<?php foreach ($this->samples as $controller) : ?>
+	<a href="<?= $this->url(array('controller' => $controller), null, true) ?>"
+		><?= $this->escape($controller) ?></a><br />
+<?php endforeach; ?>
